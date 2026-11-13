@@ -1,11 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
+    <LsRoot Condition="'$(LsRoot)' == ''">$(MSBuildThisFileDirectory)..\..\..\LiveSplit</LsRoot>
+    <LsSrcPath>$(LsRoot)\src</LsSrcPath>
+    <LsLibPath>$(LsRoot)\lib</LsLibPath>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
     <TargetFramework>net4.8.1</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <AssemblyName>LiveSplit.Leaderboard</AssemblyName>
     <RootNamespace>LiveSplit.Leaderboard</RootNamespace>
-    <Version>0.2.2</Version>
+    <Version>0.2.3</Version>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="$(LsLibPath)/SpeedrunComSharp/src/SpeedrunComSharp/SpeedrunComSharp.csproj" Private="false" ExcludeAssets="runtime" />
